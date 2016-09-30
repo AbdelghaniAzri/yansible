@@ -18,8 +18,8 @@ ansible-playbook -i int webservers.yml --extra-vars "version=xxxx yfolder=/home/
 GNU General Public License v3.0
 
 # Author
-boufnichel
+Boufnichel Mohamed
 
-if you have any question or need help, please send me an email on : 
-moboufnichel@sqli.com or boufnichel.mohamed@gmail.com
+> if you have any question or need help, please send me an email on : 
+> moboufnichel@sqli.com or boufnichel.mohamed@gmail.com
 
