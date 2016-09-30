@@ -1,5 +1,0 @@
----
-hybris_home: "{{yfolder | default('/home/applis/hybris')}}"
-# 1 month = 24*30 = 720 h
-optimize_delai: 720h
-...

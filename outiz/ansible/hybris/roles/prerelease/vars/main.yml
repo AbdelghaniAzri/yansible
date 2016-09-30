@@ -1,9 +1,0 @@
----
-hybris_home: "{{yfolder | default('/home/applis/hybris')}}"
-hybris_install: "{{hybris_home}}/install/{{version}}"
-hybris_config:  "{{hybris_home}}/config"
-platform_home: "{{hybris_home}}/hybris/bin/platform"
-hybris_ant: "{{hybris_install}}/hybris/bin/platform/apache-ant-1.9.1/bin/ant"
-hybris_logs: "{{hybris_home}}/logs/"
-hybris_release_zip_name: hybrisServer-AllExtensions.zip
-...

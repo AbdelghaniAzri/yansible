@@ -1,4 +1,0 @@
----
-hybris_home: "{{yfolder | default('/home/applis/hybris')}}"
-
-...

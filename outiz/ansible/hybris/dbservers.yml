@@ -1,9 +1,0 @@
----
-# database server playbook
-
-- hosts: dbservers
-
-# put your roles here
-
-  roles:
-    - common
