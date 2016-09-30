@@ -1,5 +1,5 @@
 # yansible
-ansible project for automating hybris deployment
+ansible project for automating hybris deployment (Version 0.1_Beta)
 
 # exemple of use
 Deploy hybris on integration
