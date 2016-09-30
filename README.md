@@ -6,6 +6,14 @@ Deploy hybris on integration
 ```
 ansible-playbook -i int webservers.yml --extra-vars "version=xxxx yfolder=/home/applis/hybris revision=yyyy impex=zzzz"
 ```
+
+#Roadmap
+- automating update system
+- automating indexation 
+- automating synchronization
+- optimize artifact
+- feature deployment
+
 # License
 GNU General Public License v3.0
 
@@ -14,3 +22,4 @@ boufnichel
 
 if you have any question or need help, please send me an email on : 
 moboufnichel@sqli.com or boufnichel.mohamed@gmail.com
+
