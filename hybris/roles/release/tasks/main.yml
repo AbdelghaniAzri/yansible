@@ -1,0 +1,27 @@
+---
+## Playbook for installing the release
+# this playbook should be run for each release
+
+- name: stat "{{ hybris_current }}/bin/platform/"
+  stat:
+    path: "{{ hybris_current }}/bin/platform/"
+  register: current_stat
+
+- name: Stop hybris
+  command: ./hybrisserver.sh stop
+  args:
+   chdir: "{{ hybris_current }}/bin/platform/"
+  when: current_stat.stat.exists
+
+- name: Edit current symbolic link
+  file:
+   src: "{{ hybris_install }}/hybris"
+   dest: "{{ hybris_current }}"
+   state: link
+
+- name: Start hybris
+  command: ./hybrisserver.sh start
+  args:
+   chdir: "{{ hybris_current }}/bin/platform/"
+
+...

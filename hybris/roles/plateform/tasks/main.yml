@@ -1,0 +1,25 @@
+---
+
+## Playbook for installing hybris plateform
+
+- name: Create release directory for {{version}}
+  file:
+   path: "{{item}}"
+   state: directory
+  with_items:
+   - "{{hybris_install}}"
+
+- name: Copy plateform zip
+  copy:
+   src: "{{hybris_repo}}/{{hybris_zip_name}}"
+   dest: "{{hybris_home}}"
+
+- name: Unzip plateform
+  command: unzip -o "{{hybris_home}}/{{hybris_zip_name}}" -d "{{hybris_install}}"
+
+- name: Remove hybris artifacts
+  file:
+   path: "{{hybris_home}}/{{hybris_zip_name}}"
+   state: absent
+
+...

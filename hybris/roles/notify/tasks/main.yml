@@ -1,0 +1,12 @@
+---
+## Playbook for notification using hipchat
+
+- hipchat:
+    api: "https://xxxx.hipchat.com/v2/"
+    token: iBdhbKYsftOLjk3EEjHrvNFZDH5Gsf7LRNVecUgZ
+    room: 3147406
+    msg: "Hi, <br/><br/> The {{version}} was installed ! <br/><br/> Delivery Bot<br/>Thanks"
+    color: green
+    msg_format: html
+   
+...

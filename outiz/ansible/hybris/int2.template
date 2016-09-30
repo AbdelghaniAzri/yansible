@@ -1,1 +1,0 @@
-ansible-playbook -i int2 webservers.yml --extra-vars "version=outiz-ansible-test_beta yfolder=/home/applis/hybris"

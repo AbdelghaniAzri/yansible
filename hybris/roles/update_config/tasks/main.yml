@@ -1,0 +1,40 @@
+---
+## Playbook for installing config
+# this playbook should be run only on first installation
+
+#- name: Upload private.<env>.properties
+#  copy:
+#   src: private.int1.properties
+#   dest: "{{hybris_config}}"
+
+- name: Stat local.properties
+  stat:
+    path: "{{hybris_config}}/local.properties"
+  register: config_stat
+
+- name: Set current revision on local.properties
+  lineinfile: 
+   dest: "{{hybris_config}}/local.properties"
+   regexp: ^script.files.version=
+   line: script.files.version={{ revision }}
+  when: config_stat.stat.exists
+  
+- name: Set current impex version
+  lineinfile: 
+   dest: "{{hybris_config}}/local.properties"
+   regexp: ^impex.versions=
+   line: impex.versions={{ impex }}
+  when: config_stat.stat.exists
+  
+#- name: rename local.properties to template.properties
+#  command: mv "{{hybris_config}}/local.properties" "{{hybris_config}}/template.properties"
+#  when: config_stat.stat.exists
+#
+#- name: Assemble local.properties
+#  assemble:
+#   src: "{{hybris_config}}"
+#   regexp: "^private\\.int|template"
+#   dest: "{{hybris_config}}/local.properties"
+#   backup: yes
+#   delimiter: "## ======================= CONFIG FRAGMENT ================="
+...
