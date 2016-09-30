@@ -1,0 +1,15 @@
+---
+# webserver playbook
+
+- hosts: webservers
+
+  roles:
+#    - init
+#    - config
+    - plateform
+    - prerelease
+    - archive
+#    - optimize
+#    - release
+    - update_config
+    - notify 

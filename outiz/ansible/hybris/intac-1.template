@@ -1,0 +1,1 @@
+ansible-playbook -i intac-1 webservers.yml --extra-vars "version=outiz-x.x.x_8888 yfolder=/home/applis/hybris revision=8888"

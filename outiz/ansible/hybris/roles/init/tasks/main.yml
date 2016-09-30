@@ -1,0 +1,11 @@
+---
+## Playbook for initialization
+# this playbook should be run only on first installation
+
+- name: Create hybris home folder
+  file:
+   path: "{{item}}"
+   state: directory
+  with_items:
+   - "{{hybris_home}}"
+...

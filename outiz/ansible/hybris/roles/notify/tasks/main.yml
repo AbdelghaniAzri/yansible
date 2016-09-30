@@ -1,0 +1,12 @@
+---
+## Playbook for notification using hipchat
+
+- hipchat:
+    api: "https://outiz.hipchat.com/v2/"
+    token: iBdhbKYsftOLjk3VEjHrvNFZDH5Fsf7LRNVecUgZ
+    room: 3147201
+    msg: "Bonjour, <br/><br/> La version {{version}} est installée sur la recette <br/><br/> Outiz Delivery Bot<br/>Cordialement"
+    color: green
+    msg_format: html
+   
+...

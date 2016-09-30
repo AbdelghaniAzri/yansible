@@ -1,0 +1,6 @@
+---
+hybris_home: "{{yfolder | default('/home/applis/hybris')}}"
+hybris_repo: /home/hybris/.jenkins/jobs/Continous_deploiement/workspace/Sources/hybris/temp/hybris/hybrisServer
+hybris_zip_name: hybrisServer-Platform.zip
+hybris_install: "{{hybris_home}}/install/{{version}}"
+...

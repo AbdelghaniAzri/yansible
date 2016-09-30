@@ -1,0 +1,17 @@
+---
+## Playbook for installing config
+# this playbook should be run only on first installation
+
+- name: Copy config
+  copy:
+   src: "{{config_zip_name}}"
+   dest: "{{hybris_home}}"
+
+- name: Unzip config
+  command: unzip -o "{{hybris_home}}/{{config_zip_name}}" -d "{{hybris_home}}"
+
+- name: Remove hybris {{config_zip_name}}
+  file:
+   path: "{{hybris_home}}/{{config_zip_name}}"
+   state: absent
+...
